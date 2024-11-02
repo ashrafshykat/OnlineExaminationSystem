@@ -1,23 +1,17 @@
 package designPatterns;
 import java.util.*;
 public class Last15min implements IObservable  {
-
+	Vector<IObserver> observer = null;
 	@Override
 	public void add(IObserver o) {
-		Vector<IObserver> observer;
-		this.add(o);
+		this.observer.add(o);
 	}
-
 	@Override
 	public void remove(IObserver o) {
-		this.
-		
+		this.observer.remove(o);
 	}
-
 	@Override
 	public void notify(IObserver o) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("15 MINUTES REMAINING");
 	}
-
 }
